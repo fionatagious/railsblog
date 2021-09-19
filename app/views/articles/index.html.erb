@@ -1,11 +1,13 @@
 <h1>Articles</h1>
+
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <%= article.title %>
+      <a href="/articles/<%= article.id %>">
+        <%= article.title %>
+      </a>
     </li>
   <% end %>
 </ul>
-
 <!--The <% %> tag means "evaluate the enclosed Ruby code." -->
 <!--The <%= %> tag means "evaluate the enclosed Ruby code, and output the value it returns." -->
